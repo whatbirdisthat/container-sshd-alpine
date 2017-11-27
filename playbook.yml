@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+
+    - name: APK install some packages
+      apk: name={{ item }} state=present
+      with_items:
+        - tree
+        - tmux
